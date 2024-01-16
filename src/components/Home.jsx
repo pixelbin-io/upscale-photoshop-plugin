@@ -18,8 +18,6 @@ const styles = {
         alignItems: "center",
         justifyContent: "center",
         background: "rgba(0, 0, 0, 0.9)",
-        zIndex: 1,
-        margin: "-1rem",
     },
     header: {
         display: "flex",
@@ -56,6 +54,7 @@ const styles = {
         borderRadius: "4px",
         border: "0.2px solid var(--uxp-host-text-color-secondary)",
     },
+    fields: {},
     helpIcon: {
         fill: "currentcolor",
         marginRight: "0.2rem",
@@ -144,7 +143,7 @@ export const Home = ({
         const [, error] = await handle(
             applyTransformation({
                 appOrgDetails,
-                filters: formValues,
+                parameters: formValues,
                 token,
             })
         );
@@ -183,13 +182,16 @@ export const Home = ({
         setFormValues(filters);
     };
 
+    if (loading) {
+        return (
+            <div style={styles.loadingBackdrop}>
+                <Loader />
+            </div>
+        );
+    }
+
     return (
         <div style={styles.wrapper}>
-            {loading && (
-                <div style={styles.loadingBackdrop}>
-                    <Loader />
-                </div>
-            )}
             <header style={styles.header}>
                 <a
                     href={constants.urls.pluginHomePage}
@@ -205,16 +207,19 @@ export const Home = ({
                     How it works?
                 </a>
             </header>
+
             <main style={styles.form}>
-                {params.map((param) => (
-                    <InputField
-                        key={param.identifier}
-                        value={formValues[param.identifier]}
-                        param={param}
-                        handleChange={handleChange}
-                        handleResetClick={handleResetClick}
-                    />
-                ))}
+                <div style={styles.fields}>
+                    {params.map((param) => (
+                        <InputField
+                            key={param.identifier}
+                            value={formValues[param.identifier]}
+                            param={param}
+                            handleChange={handleChange}
+                            handleResetClick={handleResetClick}
+                        />
+                    ))}
+                </div>
 
                 <div style={styles.actions}>
                     <sp-action-button

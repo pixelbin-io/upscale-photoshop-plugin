@@ -11,7 +11,7 @@ export const constants = {
             "https://console.pixelbin.io/organization/:orgId/settings/billing/pricing",
 
         pluginHomePage: "https://www.upscale.media",
-        pluginDoc: "https://www.pixelbin.io/docs/tools/photoshop/upscale",
+        pluginDoc: "https://www.pixelbin.io/docs/tools/photoshop/upscale/",
 
         apiDomain: "https://api.pixelbin.io",
     },
