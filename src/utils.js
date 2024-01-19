@@ -162,7 +162,7 @@ export const applyTransformation = async ({
             const suspensionID =
                 await executionContext.hostControl.suspendHistory({
                     documentID: originalImageLayer._docId,
-                    name: "Upscale",
+                    name: "Upscale.media",
                 });
 
             try {
@@ -197,7 +197,7 @@ export const applyTransformation = async ({
 
                 const { presignedUrl } =
                     await pixelbin.assets.createSignedUrlV2({
-                        path: "__photoshop",
+                        path: "__photoshop/__upscale.media",
                         format: "jpeg",
                         filenameOverride: true,
                     });

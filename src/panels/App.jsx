@@ -40,7 +40,7 @@ export const App = ({ panel }) => {
                 appOrgDetails={appOrgDetails}
                 token={token}
                 filters={filters}
-                setfilters={_setFilters}
+                setFilters={_setFilters}
             />
         );
     }

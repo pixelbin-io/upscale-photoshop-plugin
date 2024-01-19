@@ -1,6 +1,6 @@
 {
-    "id": "upscale",
-    "name": "Upscale",
+    "id": "628572de",
+    "name": "Upscale.media",
     "version": "1.0.0",
     "main": "index.html",
     "manifestVersion": 5,
@@ -45,7 +45,7 @@
         {
             "type": "panel",
             "id": "app",
-            "label": { "default": "Upscale" },
+            "label": { "default": "Upscale.media" },
             "minimumSize": { "width": 260, "height": 540 },
             "maximumSize": { "width": 260, "height": 540 },
             "preferredDockedSize": { "width": 260, "height": 540 },

@@ -21,6 +21,7 @@ const styles = {
     },
     header: {
         display: "flex",
+        flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
         marginBottom: "2rem",
@@ -63,6 +64,8 @@ const styles = {
     helpLink: {
         display: "flex",
         alignItems: "center",
+        alignSelf: "end",
+        marginTop: "1rem",
         color: "var(--uxp-host-text-color)",
         fontSize: "var(--uxp-host-font-size)",
     },
@@ -198,7 +201,7 @@ export const Home = ({
                     style={styles.productFullLogo}
                 >
                     <img style={styles.productLogo} src="./icons/upscale.png" />
-                    Upscale
+                    Upscale.media
                 </a>
                 <a href={constants.urls.pluginDoc} style={styles.helpLink}>
                     <span style={styles.helpIcon}>

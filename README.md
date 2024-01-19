@@ -1,9 +1,9 @@
-# Upscale for Photoshop
+# Upscale.media for Photoshop
 
 This plugin introduces support to upscale the resolution of images in Photoshop backend by [PixelBin's](https://www.pixelbin.io) Upscale transformation.
 
 > [!NOTE]
-> To learn more about how to use this plugin, [click here](https://www.pixelbin.io/docs/tools/photoshop/upscale/).
+> To learn more about how to use this plugin, [click here](https://www.pixelbin.io/docs/integrations/photoshop/upscale.media/).
 
 ## Install dependencies
 
