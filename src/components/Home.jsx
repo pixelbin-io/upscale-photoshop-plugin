@@ -53,7 +53,7 @@ const styles = {
         margin: "-16px -12px",
         padding: "16px",
         borderRadius: "4px",
-        border: "0.2px solid var(--uxp-host-text-color-secondary)",
+        border: "0.5px solid var(--uxp-host-text-color-secondary)",
     },
     fields: {},
     helpIcon: {
